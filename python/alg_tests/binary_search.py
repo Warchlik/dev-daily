@@ -1,17 +1,17 @@
 def main(arr: list[int], len: int, search: int):
 
-    l: int = 0
-    r: int = len - 1
+    left: int = 0
+    right: int = len - 1
 
-    while l <= r:
-        m: int = (l + r) // 2
+    while left <= right:
+        m: int = (left + right) // 2
         if arr[m] == search:
             return m
         else:
             if arr[m] > search:
-                r = m - 1
+                right = m - 1
             else:
-                l = m + 1
+                left = m + 1
 
     return -1
 
